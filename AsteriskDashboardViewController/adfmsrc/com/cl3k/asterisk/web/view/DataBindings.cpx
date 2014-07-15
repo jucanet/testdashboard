@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.9.1" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.cl3k.asterisk.web.view" ClientType="Generic">
+  <pageMap>
+    <page path="/dashboard.jsf" usageId="com_cl3k_asterisk_web_view_dashboardPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_cl3k_asterisk_web_view_dashboardPageDef" path="com.cl3k.asterisk.web.view.pageDefs.dashboardPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="Peers" path="com.cl3k.asterisk.web.model.Peers"/>
+  </dataControlUsages>
+</Application>

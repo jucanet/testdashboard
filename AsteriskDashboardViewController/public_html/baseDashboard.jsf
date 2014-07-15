@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:resource type="javascript" source="js/timer.js"></af:resource>
+    <af:document title="baseDashboard.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter orientation="vertical" splitterPosition="100" id="ps1">
+                <f:facet name="first">
+                    <af:panelGridLayout id="pgl1">
+                        <af:gridRow marginTop="5px" height="auto" id="gr1">
+                            <af:gridCell marginStart="5px" width="10%" id="gc1"/>
+                            <af:gridCell marginStart="5px" width="33%" id="gc2"/>
+                            <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc3">
+                                <af:outputText value="outputText1" id="txt" clientComponent="true"/>
+                            </af:gridCell>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" id="gr2">
+                            <af:gridCell marginStart="5px" width="10%" id="gc4"/>
+                            <af:gridCell marginStart="5px" width="33%" id="gc5"/>
+                            <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc6"/>
+                        </af:gridRow>
+                        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr3">
+                            <af:gridCell marginStart="5px" width="10%" id="gc7"/>
+                            <af:gridCell marginStart="5px" width="33%" id="gc8"/>
+                            <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="gc9"/>
+                        </af:gridRow>
+                    </af:panelGridLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:decorativeBox theme="dark" id="db2">
+                        <f:facet name="center">
+                            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps2">
+                                <f:facet name="first">
+                                    <af:panelAccordion discloseMany="false" id="pa1">
+                                        <af:showDetailItem id="dashboard" text="Dashboard"/>
+                                        <af:showDetailItem id="admin" text="Administracion"/>
+                                    </af:panelAccordion>
+                                </f:facet>
+                                <f:facet name="second">
+                                    <af:decorativeBox theme="medium" id="db1">
+                                        <f:facet name="center">
+                                            <af:panelDashboard id="pd1"/>
+                                        </f:facet>
+                                    </af:decorativeBox>
+                                </f:facet>
+                            </af:panelSplitter>
+                        </f:facet>
+                    </af:decorativeBox>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+        <af:clientListener method="startTime()" type="load"/>
+    </af:document>
+</f:view>

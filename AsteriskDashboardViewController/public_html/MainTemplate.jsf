@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelBorderLayout id="pt_pbl1">
+        <f:facet name="start"/>
+        <f:facet name="bottom"/>
+        <f:facet name="end"/>
+        <f:facet name="top"/>
+    </af:panelBorderLayout>
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>MainTemplate</afc:display-name>
+        </afc:component>
+    </af:xmlContent>
+</af:pageTemplateDef>

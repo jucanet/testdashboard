@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.9.1" id="dashboardPageDef"
+                Package="com.cl3k.asterisk.web.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="findAllContacts.result" DataControl="Peers" RangeSize="25"
+                    BeanClass="com.cl3k.asterisk.web.model.Peer" id="findAllContactsIterator"/>
+    <searchRegion Binds="findAllContactsIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="PeerQuery"/>
+  </executables>
+  <bindings>
+    <methodAction id="findAllContacts" RequiresUpdateModel="true" Action="invokeMethod" MethodName="findAllContacts"
+                  IsViewObjectMethod="false" DataControl="Peers" InstanceName="data.Peers.dataProvider"
+                  ReturnName="data.Peers.methodResults.findAllContacts_Peers_dataProvider_findAllContacts_result"/>
+    <tree IterBinding="findAllContactsIterator" id="Peer">
+      <nodeDefinition DefName="com.cl3k.asterisk.web.model.Peer" Name="Peer0">
+        <AttrNames>
+          <Item Value="peerID"/>
+          <Item Value="server"/>
+          <Item Value="dateReceived"/>
+          <Item Value="timestamp"/>
+          <Item Value="ipaddress"/>
+          <Item Value="status"/>
+          <Item Value="cause"/>
+          <Item Value="peerstatus"/>
+          <Item Value="totalInboundCalls"/>
+          <Item Value="totalOutboundCalls"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

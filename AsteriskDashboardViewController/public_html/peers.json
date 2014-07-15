@@ -1,0 +1,16 @@
+{"action":"response","idrequest":"1234-1","server":"Server1"
+,"data":[
+{"peerID":"SIP/102","server":"ServerUno","timestamp":1.40495764769E12,"dateReceived":"2014-07-09 23:00:47","chanobjecttype":"peer"
+,"channeltype":"SIP","ipaddress":"","objectname":"102","status":"Unmonitored","dynamic":true,"peer":"SIP/102","cause":"Expired","time":""
+,"peerstatus":"Unregistered","initializedTimeStamp":1.40495516535E12,"totalInboundCalls":0,"totalOutboundCalls":0,"inboundCallsAnswered":0,"inboundCallsNotAnswered":0
+,"outboundCallsAnswered":0,"outboundCallsNotAnswered":0}
+,{"peerID":"SIP/102","server":"ServerUno","timestamp":1.40495764769E12,"dateReceived":"2014-07-09 23:00:47","chanobjecttype":"peer"
+,"channeltype":"SIP","ipaddress":"","objectname":"102","status":"Unmonitored","dynamic":true,"peer":"SIP/102","cause":"Expired","time":""
+,"peerstatus":"Unregistered","initializedTimeStamp":1.40495516535E12,"totalInboundCalls":0,"totalOutboundCalls":0,"inboundCallsAnswered":0,"inboundCallsNotAnswered":0
+,"outboundCallsAnswered":0,"outboundCallsNotAnswered":0}
+,{"peerID":"SIP/102","server":"ServerUno","timestamp":1.40495764769E12,"dateReceived":"2014-07-09 23:00:47","chanobjecttype":"peer"
+,"channeltype":"SIP","ipaddress":"","objectname":"102","status":"Unmonitored","dynamic":true,"peer":"SIP/102","cause":"Expired","time":""
+,"peerstatus":"Unregistered","initializedTimeStamp":1.40495516535E12,"totalInboundCalls":0,"totalOutboundCalls":0,"inboundCallsAnswered":0,"inboundCallsNotAnswered":0
+,"outboundCallsAnswered":0,"outboundCallsNotAnswered":0}
+]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.1.3.9.1" id="DataControls"
+                    Package="com.cl3k.asterisk.web.model">
+  <AdapterDataControl id="Peers" FactoryClass="oracle.adf.model.adapter.bean.BeanDCFactoryImpl"
+                      ImplDef="oracle.adf.model.adapter.bean.BeanDCDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="true" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="com.cl3k.asterisk.web.model.Peers"
+                      BeanClass="com.cl3k.asterisk.web.model.Peers" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <CreatableTypes>
+      <TypeInfo FullName="com.cl3k.asterisk.web.model.Peer"/>
+    </CreatableTypes>
+    <Source>
+      <bean-definition BeanClass="com.cl3k.asterisk.web.model.Peers"
+                       DataControlHandler="oracle.adf.model.adapter.bean.DataFilterHandler"
+                       EagerPersist="false" xmlns="http://xmlns.oracle.com/adfm/adapter/bean"/>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>
