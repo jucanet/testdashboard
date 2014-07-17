@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+  <af:decorativeBox id="pt_db1" theme="light" topHeight="150px">
+    <f:facet name="center">
+      <af:facetRef facetName="center"/>
+    </f:facet>
+    <f:facet name="top">
+      <af:panelGridLayout id="pt_pgl1">
+        <af:gridRow marginTop="5px" height="auto" id="pt_gr1">
+          <af:gridCell marginStart="5px" rowSpan="3" width="10%" id="pt_gc1">
+            <af:image source="images/r2013_logo_sii.gif" id="pt_i1"/>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="auto" id="pt_gc2">
+            <af:outputText value="#{attrs.title}" id="pt_ot1" inlineStyle="color:ActiveCaption;"/>
+            <af:outputText value="outputText1" id="pt_ot2"/>
+          </af:gridCell>
+          <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="pt_gc3">
+            <af:outputText value="Fecha y hora" id="txt"/>
+          </af:gridCell>
+        </af:gridRow>
+        <af:gridRow marginTop="5px" height="auto" id="pt_gr2">
+          <af:gridCell marginStart="5px" width="auto" id="pt_gc4"/>
+          <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="pt_gc5"/>
+        </af:gridRow>
+        <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="pt_gr3">
+          <af:gridCell marginStart="5px" width="auto" id="pt_gc6"/>
+          <af:gridCell marginStart="5px" width="10%" marginEnd="5px" id="pt_gc7"/>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </f:facet>
+  </af:decorativeBox>
+  <af:xmlContent>
+    <afc:component>
+      <afc:description/>
+      <afc:display-name>DashboardTemplate</afc:display-name>
+      <afc:facet>
+        <afc:facet-name>center</afc:facet-name>
+      </afc:facet>
+      <afc:attribute>
+        <afc:attribute-name>title</afc:attribute-name>
+        <afc:attribute-class>java.lang.String</afc:attribute-class>
+        <afc:default-value>Dashboard</afc:default-value>
+      </afc:attribute>
+    </afc:component>
+  </af:xmlContent>
+</af:pageTemplateDef>

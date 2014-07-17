@@ -3,9 +3,18 @@
              SeparateXMLFiles="false" Package="com.cl3k.asterisk.web.view" ClientType="Generic">
   <pageMap>
     <page path="/dashboard.jsf" usageId="com_cl3k_asterisk_web_view_dashboardPageDef"/>
+    <page path="/DashboardTemplate.jsf" usageId="com_cl3k_asterisk_web_view_DashboardTemplatePageDef"/>
+    <page path="/baseTemplate.jsf" usageId="com_cl3k_asterisk_web_view_baseTemplatePageDef"/>
+    <page path="/tablasBashboard.jsff" usageId="com_cl3k_asterisk_web_view_tablasBashboardPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_cl3k_asterisk_web_view_dashboardPageDef" path="com.cl3k.asterisk.web.view.pageDefs.dashboardPageDef"/>
+    <page id="com_cl3k_asterisk_web_view_DashboardTemplatePageDef"
+          path="com.cl3k.asterisk.web.view.pageDefs.DashboardTemplatePageDef"/>
+    <page id="com_cl3k_asterisk_web_view_baseTemplatePageDef"
+          path="com.cl3k.asterisk.web.view.pageDefs.baseTemplatePageDef"/>
+    <page id="com_cl3k_asterisk_web_view_tablasBashboardPageDef"
+          path="com.cl3k.asterisk.web.view.pageDefs.tablasBashboardPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="Peers" path="com.cl3k.asterisk.web.model.Peers"/>

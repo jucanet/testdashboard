@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:panelGridLayout id="pgl1">
+        <af:gridRow height="100%" id="gr1">
+            <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                <!-- Content -->
+                <af:table value="#{bindings.Peer.collectionModel}" var="row" rows="#{bindings.Peer.rangeSize}"
+                          emptyText="#{bindings.Peer.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.Peer.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.Peer.collectionModel.makeCurrent}" rowSelection="single"
+                          fetchSize="#{bindings.Peer.rangeSize}" filterModel="#{bindings.PeerQuery.queryDescriptor}"
+                          queryListener="#{bindings.PeerQuery.processQuery}" filterVisible="true" varStatus="vs"
+                          id="t1">
+                    <af:column sortProperty="#{bindings.Peer.hints.peerID.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.peerID.label}" filterable="true" id="c1">
+                        <af:outputText value="#{row.peerID}" shortDesc="#{bindings.Peer.hints.peerID.tooltip}"
+                                       id="ot1"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.server.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.server.label}" filterable="true" id="c2">
+                        <af:outputText value="#{row.server}" shortDesc="#{bindings.Peer.hints.server.tooltip}"
+                                       id="ot2"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.dateReceived.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.dateReceived.label}" filterable="true" id="c3">
+                        <af:outputText value="#{row.dateReceived}"
+                                       shortDesc="#{bindings.Peer.hints.dateReceived.tooltip}" id="ot3"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.timestamp.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.timestamp.label}" id="c4">
+                        <af:outputText value="#{row.timestamp}" shortDesc="#{bindings.Peer.hints.timestamp.tooltip}"
+                                       id="ot4">
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.Peer.hints.timestamp.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.chanobjecttype.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.chanobjecttype.label}" id="c5">
+                        <af:outputText value="#{row.chanobjecttype}"
+                                       shortDesc="#{bindings.Peer.hints.chanobjecttype.tooltip}" id="ot5"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.channeltype.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.channeltype.label}" id="c6">
+                        <af:outputText value="#{row.channeltype}" shortDesc="#{bindings.Peer.hints.channeltype.tooltip}"
+                                       id="ot6"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.ipaddress.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.ipaddress.label}" filterable="true" id="c7">
+                        <af:outputText value="#{row.ipaddress}" shortDesc="#{bindings.Peer.hints.ipaddress.tooltip}"
+                                       id="ot7"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.objectname.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.objectname.label}" id="c8">
+                        <af:outputText value="#{row.objectname}" shortDesc="#{bindings.Peer.hints.objectname.tooltip}"
+                                       id="ot8"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.status.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.status.label}" filterable="true" id="c9">
+                        <af:outputText value="#{row.status}" shortDesc="#{bindings.Peer.hints.status.tooltip}"
+                                       id="ot9"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.dynamic.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.dynamic.label}" id="c10">
+                        <af:outputText value="#{row.dynamic}" shortDesc="#{bindings.Peer.hints.dynamic.tooltip}"
+                                       id="ot10"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.peer.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.peer.label}" id="c11">
+                        <af:outputText value="#{row.peer}" shortDesc="#{bindings.Peer.hints.peer.tooltip}" id="ot11"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.cause.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.cause.label}" filterable="true" id="c12">
+                        <af:outputText value="#{row.cause}" shortDesc="#{bindings.Peer.hints.cause.tooltip}" id="ot12"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.time.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.time.label}" id="c13">
+                        <af:outputText value="#{row.time}" shortDesc="#{bindings.Peer.hints.time.tooltip}" id="ot13"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.peerstatus.name}" filterable="true" sortable="true"
+                               headerText="#{bindings.Peer.hints.peerstatus.label}" id="c14">
+                        <af:outputText value="#{row.peerstatus}" shortDesc="#{bindings.Peer.hints.peerstatus.tooltip}"
+                                       id="ot14"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.initializedTimeStamp.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.initializedTimeStamp.label}" id="c15">
+                        <af:outputText value="#{row.initializedTimeStamp}"
+                                       shortDesc="#{bindings.Peer.hints.initializedTimeStamp.tooltip}" id="ot15">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.initializedTimeStamp.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.totalInboundCalls.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.totalInboundCalls.label}" filterable="true" id="c16">
+                        <af:outputText value="#{row.totalInboundCalls}"
+                                       shortDesc="#{bindings.Peer.hints.totalInboundCalls.tooltip}" id="ot16">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.totalInboundCalls.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.totalOutboundCalls.name}" sortable="true"
+                               headerText="#{bindings.Peer.hints.totalOutboundCalls.label}" filterable="true" id="c17">
+                        <af:outputText value="#{row.totalOutboundCalls}"
+                                       shortDesc="#{bindings.Peer.hints.totalOutboundCalls.tooltip}" id="ot17">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.totalOutboundCalls.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.inboundCallsAnswered.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.inboundCallsAnswered.label}" id="c18">
+                        <af:outputText value="#{row.inboundCallsAnswered}"
+                                       shortDesc="#{bindings.Peer.hints.inboundCallsAnswered.tooltip}" id="ot18">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.inboundCallsAnswered.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.inboundCallsNotAnswered.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.inboundCallsNotAnswered.label}"
+                               id="c19">
+                        <af:outputText value="#{row.inboundCallsNotAnswered}"
+                                       shortDesc="#{bindings.Peer.hints.inboundCallsNotAnswered.tooltip}" id="ot19">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.inboundCallsNotAnswered.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.outboundCallsAnswered.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.outboundCallsAnswered.label}" id="c20">
+                        <af:outputText value="#{row.outboundCallsAnswered}"
+                                       shortDesc="#{bindings.Peer.hints.outboundCallsAnswered.tooltip}" id="ot20">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.outboundCallsAnswered.format}"/>
+                        </af:outputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Peer.hints.outboundCallsNotAnswered.name}" filterable="true"
+                               sortable="true" headerText="#{bindings.Peer.hints.outboundCallsNotAnswered.label}"
+                               id="c21">
+                        <af:outputText value="#{row.outboundCallsNotAnswered}"
+                                       shortDesc="#{bindings.Peer.hints.outboundCallsNotAnswered.tooltip}" id="ot21">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Peer.hints.outboundCallsNotAnswered.format}"/>
+                        </af:outputText>
+                    </af:column>
+                </af:table>
+            </af:gridCell>
+        </af:gridRow>
+    </af:panelGridLayout>
+</ui:composition>

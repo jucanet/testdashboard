@@ -1,5 +1,5 @@
 package com.cl3k.asterisk.web.model;
-
+    
 public class Peer {
     
     private String peerID;

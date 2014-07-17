@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html">
+    <af:document title="baseTemplate.jsf" id="d1">
+        <h:outputScript id="os1" library="js/" name="timer.js"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/DashboardTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
+                <f:facet name="center">
+                    <af:panelSplitter id="ps1">
+                        <f:facet name="first">
+                            <af:panelAccordion discloseMany="false" id="pa1">
+                                <af:showDetailItem id="dash" text="Dashboard">
+                                    <af:treeTable rowBandingInterval="0" id="tt1">
+                                        <f:facet name="nodeStamp">
+                                            <af:column sortable="false" headerText="Opcion" id="c22">
+                                                <af:outputText value="#{row.col1}" id="ot1"/>
+                                            </af:column>
+                                        </f:facet>
+                                        <af:column sortable="false" headerText="Opciones" id="c23">
+                                            <af:outputText value="#{row.col1}" id="ot2"/2>
+                                        </af:column>
+                                    </af:treeTable>
+                                </af:showDetailItem>
+                                <af:showDetailItem id="admin" text="Administracion"/>
+                                <af:showDetailItem id="config" text="Configuracion"/>
+                            </af:panelAccordion>
+                        </f:facet>
+                        <f:facet name="second">
+                            <af:panelDashboard id="pd1"/>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

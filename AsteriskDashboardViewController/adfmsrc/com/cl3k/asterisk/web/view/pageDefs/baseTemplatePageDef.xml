@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="baseTemplatePageDef"
+                Package="com.cl3k.asterisk.web.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <page path="com.cl3k.asterisk.web.view.pageDefs.DashboardTemplatePageDef" id="ptb1" Refresh="ifNeeded"/>
+  </executables>
+  <bindings>
+    <methodAction id="findAllContacts" RequiresUpdateModel="true" Action="invokeMethod" MethodName="findAllContacts"
+                  IsViewObjectMethod="false" DataControl="Peers" InstanceName="data.Peers.dataProvider"
+                  ReturnName="data.Peers.methodResults.findAllContacts_Peers_dataProvider_findAllContacts_result"/>
+  </bindings>
+</pageDefinition>
